@@ -1,0 +1,31 @@
+{
+  "name": "cakephp-token",
+  "version": "1.0.0",
+  "description": "Package.json file for the CakePHP token.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VerifiedToken/cakephp-token.git"
+  },
+  "author": "VT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VerifiedToken/cakephp-token/issues"
+  },
+  "homepage": "https://github.com/VerifiedToken/cakephp-token",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-complexity": "^0.2.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-githooks": "^0.3.1",
+    "grunt-jscpd": "0.0.10",
+    "grunt-scss-lint": "^0.3.3"
+  }
+}

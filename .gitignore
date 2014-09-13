@@ -1,0 +1,27 @@
+#################
+## Vagrant
+#################
+.vagrant/*
+html/*
+default/*
+
+#################
+## CakePHP
+#################
+cktoken/app/tmp/*
+
+#################
+## Grunt
+#################
+node_modules/*
+
+#################
+## Front end
+#################
+.sass-cache/*
+cktoken/app/webroot/release/*
+
+#################
+## Others
+#################
+.idea/*
