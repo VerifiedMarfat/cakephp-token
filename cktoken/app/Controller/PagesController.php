@@ -74,20 +74,4 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
-
-	public function register() {
-		  // Has any form data been POSTed?
-	    if ($this->request->is('post')) {
-
-
-	    	$data = $this->request->data;
-	        // If the form data can be validated and saved...
-	        if ($this->Member->save($data)) {
-	            // Set a session flash message and redirect.
-	            $this->Session->setFlash('Member Saved!');
-	            return $this->redirect('login');
-	        }
-	        debug($this->Member->validationErrors);
-	    }
-	}
 }

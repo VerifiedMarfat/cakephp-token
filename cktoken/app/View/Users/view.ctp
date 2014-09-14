@@ -1,4 +1,4 @@
-<h1>View all users.</h1>
+<h1>View all admins.</h1>
 <table class="table--bordered table--striped table--data">
 <thead>
 		<tr>

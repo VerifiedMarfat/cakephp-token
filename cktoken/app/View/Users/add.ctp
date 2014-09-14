@@ -4,7 +4,7 @@
 
 <?php echo $this->Form->create('User'); ?>
 <fieldset class="push--ends">
-    <legend><?php echo __('Add User'); ?></legend>
+    <legend><?php echo __('Add Admin'); ?></legend>
     <?php 
        	echo $this->Form->input('username');
         echo $this->Form->input('email');
@@ -16,8 +16,7 @@
         	'title' => 'Repeat password', 
         	'type'=>'password'
         ));
-     
-    echo $this->Form->submit('Add User', array('label' => 'Add User', 'class' => 'btn push-half--ends btn__submit')); 
 	?>
 </fieldset>
+<?php echo $this->Form->submit('Add', array('class' => 'btn btn__submit')); ?>
 <?php echo $this->Form->end(); ?>

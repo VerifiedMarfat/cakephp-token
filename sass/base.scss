@@ -14,10 +14,12 @@
  */
 @import "generic/functions";
 
+
 /**
  * Base styles; unclassed HTML elements etc.
  */
  @import "base/normalize";
+ @import "base/headings";
 
 
 /**

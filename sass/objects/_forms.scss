@@ -1,3 +1,11 @@
+fieldset {
+	border: 1px solid $charlie;
+}
+
+legend {
+	text-transform: uppercase;
+}
+
 label {
 	margin-top: em(15);
 }
