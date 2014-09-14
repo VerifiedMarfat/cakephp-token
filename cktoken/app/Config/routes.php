@@ -30,6 +30,7 @@
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
+	// Members routing
 	Router::connect('/register', array('controller' => 'members', 'action' => 'add', 'register'));
 
 	// Admin routing

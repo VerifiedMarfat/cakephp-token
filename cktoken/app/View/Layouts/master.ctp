@@ -50,6 +50,8 @@
                             echo "</li><li>";
                             echo $this->Html->link( "Add user",  array('controller'=>'users','action'=>'add') ); 
                             echo "</li><li>";
+                            echo $this->Html->link( "View members",   array('controller'=>'members', 'action'=>'view') );
+                            echo "</li><li>";
                             echo $this->Html->link( "Add member",   array('controller'=>'members', 'action'=>'add') );
                             echo "</li><li>";
                             echo $this->Html->link( "Logout",  array('controller'=>'users','action'=>'logout') ); 

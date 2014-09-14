@@ -37,13 +37,33 @@ class MembersController extends AppController {
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
-		if (!$this->Member->exists($id)) {
-			throw new NotFoundException(__('Invalid member'));
-		}
-		$options = array('conditions' => array('Member.' . $this->Member->primaryKey => $id));
-		$this->set('member', $this->Member->find('first', $options));
+	public function view() {
+
+	    $activeMembers = $this->Member->find('available', array(
+	        'order' => array('dateCreated' => 'desc')
+	    ));
+
+
+        $this->set('members', $activeMembers);
+
+
+
+	  //   $data = array(
+			// 'members' => array($allMembers),
+			// // 'users'   => $activeUsers
+	  //   );
+
+
+
 	}
+
+	// public function view($id = null) {
+	// 	if (!$this->Member->exists($id)) {
+	// 		throw new NotFoundException(__('Invalid member'));
+	// 	}
+	// 	$options = array('conditions' => array('Member.' . $this->Member->primaryKey => $id));
+	// 	$this->set('member', $this->Member->find('first', $options));
+	// }
 
 /**
  * add method
