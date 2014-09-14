@@ -79,15 +79,7 @@ class User extends AppModel {
                 'rule' => array('between', 6, 60), 
                 'message' => 'Usernames must be between 6 to 60 characters'
             )
-        ),
-        'role' => array(
-            'valid' => array(
-                'rule' => array('inList', array('admin', 'mod')),
-                'message' => 'Please enter a valid role',
-                'allowEmpty' => false
-            )
-        ),
-         
+        ),        
          
         'password_update' => array(
             'min_length' => array(
