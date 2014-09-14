@@ -13,6 +13,16 @@ class User extends AppModel {
  */
 	public $displayField = 'username';
 
+    public $findMethods = array('available' =>  true);
+
+    protected function _findAvailable($state, $query, $results = array()) {
+        if ($state === 'before') {
+            $query['conditions']['User.status'] = '1';
+            return $query;
+        }
+        return $results;
+    }
+
 	public $validate = array(
         'username' => array(
             'nonEmpty' => array(

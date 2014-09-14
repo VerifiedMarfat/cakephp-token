@@ -46,21 +46,23 @@
                     <?php 
                         if($this->Session->check('Auth.User')):
                             echo "<li>";
-                            echo $this->Html->link("Dashboard",   array('controller'=>'users','action'=>'index') ); 
+                            echo $this->Html->link("Dashboard",   array('controller'=>'users','action'=>'index'), array('class' => 'btn btn--full')); 
                             echo "</li><li>";
-                            echo $this->Html->link( "Add user",  array('controller'=>'users','action'=>'add') ); 
+                            echo $this->Html->link( "View Members",   array('controller'=>'members', 'action'=>'view'), array('class' => 'btn btn--full'));
                             echo "</li><li>";
-                            echo $this->Html->link( "View members",   array('controller'=>'members', 'action'=>'view') );
+                            echo $this->Html->link( "Add Members",   array('controller'=>'members', 'action'=>'add'), array('class' => 'btn btn--full'));
                             echo "</li><li>";
-                            echo $this->Html->link( "Add member",   array('controller'=>'members', 'action'=>'add') );
+                            echo $this->Html->link( "View Users",  array('controller'=>'users','action'=>'view'), array('class' => 'btn btn--full')); 
                             echo "</li><li>";
-                            echo $this->Html->link( "Logout",  array('controller'=>'users','action'=>'logout') ); 
+                            echo $this->Html->link( "Add Users",  array('controller'=>'users','action'=>'add'), array('class' => 'btn btn--full')); 
+                            echo "</li><li>";
+                            echo $this->Html->link( "Logout",  array('controller'=>'users','action'=>'logout'), array('class' => 'btn btn--full')); 
                             echo "</li>";
                         else:
                             echo "<li>";
-                            echo $this->Html->link( "Login",   array('controller'=>'users', 'action'=>'login') );
+                            echo $this->Html->link( "Login",   array('controller'=>'users', 'action'=>'login'), array('class' => 'btn btn--full'));
                             echo "</li><li>"; 
-                            echo $this->Html->link( "Add new member",   array('controller'=>'members', 'action'=>'add') );
+                            echo $this->Html->link( "Add Members",   array('controller'=>'members', 'action'=>'add'), array('class' => 'btn btn--full'));
                             echo "</li>"; 
                         endif;
                     ?>

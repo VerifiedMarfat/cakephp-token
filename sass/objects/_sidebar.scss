@@ -1,0 +1,17 @@
+.nav {
+	padding: em(20);
+	
+	li {
+		margin: em(10);
+		a {
+			padding: em(10) em(15);
+			color: $bravo;
+			background: $charlie;
+
+			&:hover {
+				background: $delta;
+			}
+		}
+	}
+	
+}

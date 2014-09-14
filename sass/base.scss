@@ -12,7 +12,7 @@
 /**
  * Generic utility styles etc.
  */
-
+@import "generic/functions";
 
 /**
  * Base styles; unclassed HTML elements etc.
@@ -23,3 +23,6 @@
 /**
  * Objects and abstractions
  */
+ @import "objects/wrapper";
+ @import "objects/sidebar";
+ @import "objects/forms";

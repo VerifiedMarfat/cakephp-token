@@ -51,16 +51,24 @@ $push: 		true;
 
 $lap-and-up-push: 	true;
 
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+$base-value: 16;
 /*------------------------------------*\
     $COLOURS
 \*------------------------------------*/
 /**
  * Define colours using the commented variables, don't forget to comment the colour name next to each variable.
  */
-//$alpha:
-//$bravo:
-//$charlie:
-//$delta:
+$alpha: #000; 			// Black
+$bravo: #fff; 			// White
+$charlie: #1975D1; 		// Blue
+$delta: #8693A1; 		// Grey
 //$echo:
 //$foxtrot:
 //$golf:

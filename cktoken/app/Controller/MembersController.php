@@ -43,27 +43,9 @@ class MembersController extends AppController {
 	        'order' => array('dateCreated' => 'desc')
 	    ));
 
-
-        $this->set('members', $activeMembers);
-
-
-
-	  //   $data = array(
-			// 'members' => array($allMembers),
-			// // 'users'   => $activeUsers
-	  //   );
-
-
-
+        $this->set('Members', $activeMembers);
 	}
 
-	// public function view($id = null) {
-	// 	if (!$this->Member->exists($id)) {
-	// 		throw new NotFoundException(__('Invalid member'));
-	// 	}
-	// 	$options = array('conditions' => array('Member.' . $this->Member->primaryKey => $id));
-	// 	$this->set('member', $this->Member->find('first', $options));
-	// }
 
 /**
  * add method

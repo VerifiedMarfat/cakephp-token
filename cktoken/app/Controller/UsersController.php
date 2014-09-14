@@ -57,6 +57,14 @@ class UsersController extends AppController {
         $users = $this->paginate('User');
         $this->set(compact('users'));
     }
+
+    public function view() {
+        $activeUsers = $this->User->find('available', array(
+            'order' => array('dateCreated' => 'desc')
+        ));
+
+        $this->set('Users', $activeUsers);
+    }
  
  
     public function add() {

@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $FUNCTIONS
+\*------------------------------------*/
+/**
+ * Function that convers pixels to ems
+ */
+
+@function em($pixels) {
+	@return #{$pixels/$base-value}em;
+}

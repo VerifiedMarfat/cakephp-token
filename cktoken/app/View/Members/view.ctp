@@ -2,24 +2,19 @@
 <ul>
 <?php 
 	$count = 0;
-	foreach($members as $member):
+	foreach($Members as $Member):
 		$count++;
 	echo '<li>';
-	echo 'First name: ' . $member['Member']['name'];
+	echo 'First name: ' . $Member['Member']['name'];
 	echo '<br/>';
-	echo 'Last name: ' . $member['Member']['surname']; 
+	echo 'Last name: ' . $Member['Member']['surname']; 
 	echo '<br/>';
-	echo 'Email: ' . $member['Member']['email'];
+	echo 'Email: ' . $Member['Member']['email'];
 	echo '<br/>';
-	echo 'Telephone: ' . $member['Member']['phone'];
+	echo 'Telephone: ' . $Member['Member']['phone'];
 	echo '<br/>';
-	echo 'Address: ' . $member['Member']['address'];
+	echo 'Address: ' . $Member['Member']['address'];
 	echo '</li>' ;
-
-
-
 	endforeach;
 ?>
-
-
 </ul>

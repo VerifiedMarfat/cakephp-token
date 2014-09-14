@@ -23,7 +23,10 @@ module.exports = function(grunt) {
          ============================================================*/
         scsslint: {
             allFiles: ['sass/**/*.scss'],
-            exclude: ['sass/inuit/**/*.scss']
+            options: {
+                 exclude: ['sass/inuit/**/*.scss']
+            }
+           
         },
 
         /*============================================================
