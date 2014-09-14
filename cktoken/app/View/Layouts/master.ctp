@@ -69,7 +69,9 @@
                 </ul>
             </div><!--
             --><div class="grid__item lap-and-up-two-thirds">
-                <?php echo $this->fetch('content'); ?>
+                <div class="content">
+                    <?php echo $this->fetch('content'); ?>
+                </div>
             </div>
         </div>
         

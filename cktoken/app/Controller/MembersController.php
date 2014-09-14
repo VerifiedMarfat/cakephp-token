@@ -95,11 +95,16 @@ class MembersController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		if (!$id) {
+            $this->Session->setFlash('Please provide a member id');
+            $this->redirect(array('action'=>'index'));
+        }
+        $Member = $this->Member->findById($id);
+        if(!$Member){
+            $this->Session->setFlash('Invalid Member id provided');
+            $this->redirect(array('action'=>'index'));
+        }
 		$this->Member->id = $id;
-		if (!$this->Member->exists()) {
-			throw new NotFoundException(__('Invalid member'));
-		}
-		$this->request->allowMethod('post', 'delete');
 		if ($this->Member->delete()) {
 			$this->Session->setFlash(__('The member has been deleted.'));
 		} else {
