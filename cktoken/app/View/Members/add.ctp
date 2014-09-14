@@ -1,8 +1,8 @@
-<h1>Home page.</h1>
+<h1>Register</h1>
 
 <?php 
 
-	echo $this->Form->create('Member');
+	echo $this->Form->create('Member', array('type' => 'post'));
 
 	echo $this->Form->input('name', array(
 		'label'	=> 'First name',

@@ -25,7 +25,7 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('login','add'); 
+        $this->Auth->allow('login'); 
     }
  
     public function login() {
@@ -38,7 +38,7 @@ class UsersController extends AppController {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 $this->Session->setFlash(__('Welcome, '. $this->Auth->user('username')));
-                $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect('index');
             } else {
                 $this->Session->setFlash(__('Invalid username or password'), 'default', array(), 'auth');
             }

@@ -16,6 +16,10 @@ class MembersController extends AppController {
  */
 	public $components = array('Paginator', 'Session');
 
+ 	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('add', 'thankyou'); 
+    }
 /**
  * index method
  *
@@ -48,7 +52,6 @@ class MembersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->Member->create();
 			if ($this->Member->save($this->request->data)) {
 				$this->Session->setFlash(__('The member has been saved.'));
 				return $this->redirect('thankyou');

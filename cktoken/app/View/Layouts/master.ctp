@@ -40,7 +40,35 @@
     <!-- Primary Page Layout
     ================================================== -->
     <div class="wrapper">
-        <?php echo $this->fetch('content'); ?>
+        <div class="grid">
+            <div class="grid__item lap-and-up-one-third">
+                <ul class="nav nav--stacked">
+                    <?php 
+                        if($this->Session->check('Auth.User')):
+                            echo "<li>";
+                            echo $this->Html->link("Dashboard",   array('controller'=>'users','action'=>'index') ); 
+                            echo "</li><li>";
+                            echo $this->Html->link( "Add user",  array('controller'=>'users','action'=>'add') ); 
+                            echo "</li><li>";
+                            echo $this->Html->link( "Add member",   array('controller'=>'members', 'action'=>'add') );
+                            echo "</li><li>";
+                            echo $this->Html->link( "Logout",  array('controller'=>'users','action'=>'logout') ); 
+                            echo "</li>";
+                        else:
+                            echo "<li>";
+                            echo $this->Html->link( "Login",   array('controller'=>'users', 'action'=>'login') );
+                            echo "</li><li>"; 
+                            echo $this->Html->link( "Add new member",   array('controller'=>'members', 'action'=>'add') );
+                            echo "</li>"; 
+                        endif;
+                    ?>
+                </ul>
+            </div><!--
+            --><div class="grid__item lap-and-up-two-thirds">
+                <?php echo $this->fetch('content'); ?>
+            </div>
+        </div>
+        
     </div>
 
 
