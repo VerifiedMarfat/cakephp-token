@@ -17,10 +17,6 @@
 	        	'title' => 'Repeat password', 
 	        	'type'=>'password'
 	        ));
-
-	        echo $this->Form->hidden('status', array(
-	        	'value'	=> '1'
-	        ));
          
         echo $this->Form->submit('Add User', array('label' => 'Add User','class' => 'btn push-half--ends btn__submit')); 
 		?>
